@@ -1,0 +1,254 @@
+* {
+  transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+transition-duration: .1s;
+}
+
+.outer {
+  background-color:white;
+  display:flex;
+  flex-flow:column wrap;
+  justify-content:center;
+  align-items:center;
+  width:100vw;
+  margin:0px;
+  padding:0px;
+}
+
+#unitHeader {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: bold Italic;
+  background-color: #94a2b7;
+  color: white;
+  width: 100%;
+  font-size: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.inner {
+  background-color:white;
+  display:flex;
+  flex-flow:row nowrap;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  background-color: #94a2b7;
+}
+
+.header {
+  background-color:white;
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:center;
+  align-items:center;
+  width:95%;
+  height:50px;
+  font-family: 'Fira Sans', sans-serif;
+  background-color: #94a2b7;
+  color: white;
+  font-weight: Bold 700;
+}
+
+.navContainer {
+  background-color:white;
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:flex-start;
+  align-items:center;
+  width:100%;
+}
+
+.cont3 {
+  display:flex;
+  flex-flow:column nowrap;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+}
+
+.cont2 {
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:center;
+  align-items:flex-start;
+  background-color:white;
+  cursor:pointer;
+  width:100%;
+}
+
+.cont {
+  display:flex;
+  flex-flow:column wrap;
+  justify-content:flex-start;
+  align-items:flex-start;
+}
+
+tr {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+td {
+  text-align: left !important;
+  font-family: 'Fira Sans', sans-serif !important;
+  font-weight: Light !important;
+  font-size: 12px;
+  padding: 5px;
+  padding-left: 10px;
+}
+
+th {
+  text-align: left !important;
+  font-family: 'Fira Sans', sans-serif !important;
+  font-weight: Bold !important;
+  font-size: 17px;
+  padding-right: 10px;
+}
+
+#tableView {
+  margin-left: 15px;
+  cursor: pointer;
+  background: none;
+  background-color: none;
+  font-family: 'Fira Sans', sans-serif !important;
+  font-weight: normal !important;
+  font-size: 14px;
+  text-decoration: none;
+  color: black
+}
+
+#tableView:hover {
+  transform: scale(1.2);
+  color: white;
+  background-color: gray;
+}
+
+.img {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background-color:white;
+  min-width:400px;
+  height:300px;
+  margin-top:20px;
+}
+
+img {
+  border-radius: 15px;
+  border: solid 3px #94a2b7;
+  filter: grayscale(90%);
+}
+
+#propInfo {
+  display:flex;
+  justify-content:flex-start;
+  align-items:flexBasis;
+  min-width:400px;
+  margin-top:10px;
+  margin: 0px;
+  padding-top: 20px;
+}
+
+#btnContainer {
+  display:flex;
+  flex-flow:column nowrap;
+  justify-content:space-between;
+  align-items:flex-start;
+  background-color:transparent;
+  margin-right:15px;
+  margin-left:15px;
+  width:50%;
+  min-width:400px;
+  height:600px;
+  margin:20px;
+}
+
+.hover {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:10%;
+  min-width:100px;
+  height:45px;
+  margin-left:1px;
+  margin-right:1px;
+  flex-basis:0;
+  margin-top:1px;
+  margin-bottom:1px;
+  cursor:pointer;
+  flex-grow: 1;
+  background-color: lightgray;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: Medium;
+}
+
+.hover_Active {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:10%;
+  min-width:100px;
+  height:45px;
+  margin-left:1px;
+  margin-right:1px;
+  flex-basis:0;
+  margin-top:1px;
+  margin-bottom:1px;
+  cursor:pointer;
+  flex-grow: 1;
+  color: white;
+  background-color: gray;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: Medium;
+}
+
+.hover:hover {
+  flex-grow: 3;
+  background-color: #94a2b7;
+  color: white;
+}
+.hover2 {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:50px;
+  width:100%;
+  flex-basis:0;
+  cursor:pointer;
+  margin-top:1px;
+  margin-bottom:1px;
+  cursor:pointer;
+  flex-grow: 1.5;
+  background-color: lightgray;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: lighter;
+  font-size: 25px;
+}
+
+.hover2_Active {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:50px;
+  width:100%;
+  flex-basis:0;
+  cursor:pointer;
+  margin-top:1px;
+  margin-bottom:1px;
+  cursor:pointer;
+  color: white;
+  flex-grow: 1.5;
+  background-color: gray;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: Medium;
+}
+
+.hover2:hover {
+  flex-grow: 2;
+  background-color: #94a2b7;
+  color: white;
+}

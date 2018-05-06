@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>table</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans:700" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script>
+$(document).ready(function(){
+
+  fetch('https://randomuser.me/api/?gender=female&results=10')
+.then(
+  function(response) {
+    if (response.status != 200) {
+      console.log('Looks like there was a problem. Status Code' + response.status);
+      return;
+    }
+
+  response.json().then(function(data){
+    let female = data.results;
+  
+
+fetch('https://randomuser.me/api/?gender=male&results=6')
+.then(
+function(response) {
+  if (response.status != 200) {
+    console.log('Looks like there was a problem. Status Code' + response.status);
+    return;
+  }
+
+response.json().then(function(data){
+  let male = data.results;
+  
+  
+let table_data = [ { first_name: 'Rose',
+                   last_name: 'Tyler',
+                   home: 'Earth',
+                   cell: female[0].cell,
+                   dob: female[0].dob,
+                   email: female[0].email,
+                   street: female[0].location.street,
+                   city: female[0].location.city,
+                   picture: female[0].picture.large,
+                   },
+                 { first_name : 'Zoe',
+                   last_name  : 'Heriot',
+                   home       : 'Space Station W3',
+                   cell: female[1].cell,
+                   dob: female[1].dob,
+                   email: female[1].email,
+                   street: female[1].location.street,
+                   city: female[1].location.city,
+                   picture: female[1].picture.large,},
+                 { first_name : 'Jo',
+                   last_name  : 'Grant',
+                   home       : 'Earth',
+                   cell: male[0].cell,
+                   dob: male[0].dob,
+                   email: male[0].email,
+                   street: male[0].location.street,
+                   city: male[0].location.city,
+                   picture: male[0].picture.large,},
+                 { first_name : 'Leela',
+                   last_name  : null,
+                   home       : 'Unspecified',
+                   cell: female[2].cell,
+                   dob: female[2].dob,
+                   email: female[2].email,
+                   street: female[2].location.street,
+                   city: female[2].location.city,
+                   picture: female[2].picture.large,},
+                 { first_name : 'Romana',
+                   last_name  : null,
+                   home       : 'Gallifrey',
+                   cell: female[3].cell,
+                   dob: female[3].dob,
+                   email: female[3].email,
+                   street: female[3].location.street,
+                   city: female[3].location.city,
+                   picture: female[3].picture.large,},
+                 { first_name : 'Clara',
+                   last_name  : 'Oswald',
+                   home       : 'Earth',
+                   cell: female[4].cell,
+                   dob: female[4].dob,
+                   email: female[4].email,
+                   street: female[4].location.street,
+                   city: female[4].location.city,
+                   picture: female[4].picture.large,},
+                 { first_name : 'Adric',
+                   last_name  : null,
+                   home       : 'Alzarius',
+                   cell: male[1].cell,
+                   dob: male[1].dob,
+                   email: male[1].email,
+                   street: male[1].location.street,
+                   city: male[1].location.city,
+                   picture: male[1].picture.large,},
+                 { first_name : 'Susan',
+                   last_name  : 'Foreman',
+                   home       : 'Gallifrey',
+                   cell: female[5].cell,
+                   dob: female[5].dob,
+                   email: female[5].email,
+                   street: female[5].location.street,
+                   city: female[5].location.city,
+                   picture: female[5].picture.large,},
+                 { first_name : 'John',
+                   last_name  : 'Franklin',
+                   home       : 'Alzarius',
+                   cell: male[2].cell,
+                   dob: male[2].dob,
+                   email: male[2].email,
+                   street: male[2].location.street,
+                   city: male[2].location.city,
+                   picture: male[2].picture.large,},
+                 { first_name : 'Elena',
+                   last_name  : 'Avalar',
+                   home       : 'Space Station W3',
+                   cell: female[6].cell,
+                   dob: female[6].dob,
+                   email: female[6].email,
+                   street: female[6].location.street,
+                   city: female[6].location.city,
+                   picture: female[6].picture.large,}, 
+                 { first_name : 'Albert',
+                   last_name  : 'Smith',
+                   home       : 'Space Station W3',
+                   cell: male[3].cell,
+                   dob: male[3].dob,
+                   email: male[3].email,
+                   street: male[3].location.street,
+                   city: male[3].location.city,
+                   picture: male[3].picture.large,}, 
+                 { first_name : 'Wanda',
+                   last_name  : 'Magnolia',
+                   home       : 'Space Station W3',
+                   cell: female[7].cell,
+                   dob: female[7].dob,
+                   email: female[7].email,
+                   street: female[7].location.street,
+                   city: female[7].location.city,
+                   picture: female[7].picture.large,}, 
+                 { first_name : 'Jill',
+                   last_name  : 'Gonzela',
+                   home       : 'Unspecified',
+                   cell: female[8].cell,
+                   dob: female[8].dob,
+                   email: female[8].email,
+                   street: female[8].location.street,
+                   city: female[8].location.city,
+                   picture: female[8].picture.large,}, 
+                 { first_name : 'Jennifer',
+                   last_name  : 'Corela',
+                   home       : 'Unspecified',
+                   cell: female[9].cell,
+                   dob: female[9].dob,
+                   email: female[9].email,
+                   street: female[9].location.street,
+                   city: female[9].location.city,
+                   picture: female[9].picture.large,}, 
+                 { first_name : 'Michael',
+                  last_name  : 'Grant',
+                  home       : 'Alzarius',
+                  cell: male[4].cell,
+                  dob: male[4].dob,
+                  email: male[4].email,
+                  street: male[4].location.street,
+                  city: male[4].location.city,
+                  picture: male[4].picture.large,}, 
+                 { first_name : 'Carlos',
+                   last_name  : 'Aguilar',
+                   home       : 'Alzarius',
+                   cell: male[5].cell,
+                   dob: male[5].dob,
+                   email: male[5].email,
+                   street: male[5].location.street,
+                   city: male[5].location.city,
+                   picture: male[5].picture.large,}, ];
+  console.log(table_data);
+  for (var i = 0; i < table_data.length; i++) {
+    let tableRow = `<tr style="border: 1px solid #94a2b7;">
+    
+                      <td style="border: 1px solid #94a2b7;">
+                      <img style="height:25px;width:25px;object-fit:cover;" src="${table_data[i].picture}" />
+                      </td>
+                      <td style="border: 1px solid #94a2b7;">
+                      ${table_data[i].first_name}
+                      </td>
+                      <td style="border: 1px solid #94a2b7;">
+                      ${table_data[i].last_name}
+                      </td>
+                      <td style="border: 1px solid #94a2b7;">
+                      ${table_data[i].home}
+                      </td>
+                      <td style="border: 1px solid #94a2b7;">
+                      ${table_data[i].cell}
+                      </td>
+                      <td style="border: 1px solid #94a2b7;">
+                      ${table_data[i].dob}
+                      </td>
+                      <td style="border: 1px solid #94a2b7;">
+                      ${table_data[i].email}
+                      </td>
+                      <td style="border: 1px solid #94a2b7;">
+                      ${table_data[i].street}
+                      </td>
+                      <td style="border: 1px solid #94a2b7;">
+                      ${table_data[i].city}
+                      </td>
+                    </tr>`;
+                    
+                    document.getElementById('table').innerHTML += tableRow;
+  }
+  
+  
+        })
+      })
+    })
+  })
+})
+  </script>
+  </head>
+  <body class="outer">
+    <div class="inner">
+    <h1 class="header">
+      Astronaut Database
+      <a id="tableView" href="index.html">view citizens</a>
+    </h1>
+  </div>
+  <div id="tableDiv" style="width:100%;"></div>
+  <table id="table" style="border: 1px solid #94a2b7;margin-top:15">
+    <tr style="border: 1px solid #94a2b7;">
+      <th style="border: 1px solid #94a2b7;">
+        Picture
+      </th>
+    <th style="border: 1px solid #94a2b7;">
+      First Name
+    </th>
+    <th style="border: 1px solid #94a2b7;">
+      Last Name
+    </th>
+    <th style="border: 1px solid #94a2b7;">
+      Home
+    </th>
+    <th style="border: 1px solid #94a2b7;">
+      Cell
+    </th>
+    <th style="border: 1px solid #94a2b7;">
+      Date of Birth
+    </th>
+    <th style="border: 1px solid #94a2b7;">
+      Email
+    </th>
+    <th style="border: 1px solid #94a2b7;">
+      Street
+    </th>
+    <th style="border: 1px solid #94a2b7;">
+      City
+    </th>
+    
+    </tr>
+  </table>
+  </body>
+</html>
